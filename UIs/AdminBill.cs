@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShop_Management_System
+namespace PetShop_Management_System.UIs
 {
-    public partial class Splash : Form
+    public partial class AdminBill : Form
     {
-        public Splash()
+        public AdminBill()
         {
             InitializeComponent();
-        }
-
-        private void Splash_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
         }
     }
 }

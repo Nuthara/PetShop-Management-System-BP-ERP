@@ -9,23 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShop_Management_System
+namespace PetShop_Management_System.UIs
 {
-    public partial class Loginb : Form
+    public partial class AdminLogin : Form
     {
-        public Loginb()
+        public AdminLogin()
         {
             InitializeComponent();
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\DELL\OneDrive - NSBM\Documents\PetShopDb.mdf"";Integrated Security=True;Connect Timeout=30");
-        private void Loginb_Load(object sender, EventArgs e)
-        {
-          
-        }
-
-
-        //Login button
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string username = UsernameTb.Text;
@@ -65,10 +58,16 @@ namespace PetShop_Management_System
             finally
             {
                 Con.Close();
+
             }
         }
+            private void label4_Click(object sender, EventArgs e)
+        {
+            Loginb Obj = new Loginb();
+            Obj.Show();
+            this.Hide();
+        }
 
-        //Exit button
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
